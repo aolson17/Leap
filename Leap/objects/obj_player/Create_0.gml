@@ -11,7 +11,7 @@ jump_speed = 8
 
 move_friction = .4
 
-tail_run_image_speed_factor = .05 // How much run speed effects the animation speed
+tail_run_image_speed_factor = .1 // How much run speed effects the animation speed
 blink_speed = .13
 
 tail_index = 0
