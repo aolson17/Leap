@@ -866,7 +866,7 @@
             "Key": "d18334b1-6e6a-4c4b-ba77-03f4ccab125d",
             "Value": {
                 "id": "8572ff0f-73b1-4032-8366-62ae8f86db74",
-                "resourcePath": "objects\\obj_help\\obj_help.yy",
+                "resourcePath": "objects\\obj_button_help\\obj_button_help.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -908,6 +908,14 @@
                 "id": "82a079f0-10e7-4e92-b203-fa83d219307b",
                 "resourcePath": "views\\d650c3e4-c574-4fe9-b9d5-74f428c94782.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d86dcd33-a6f4-462e-82c0-d4c1712d4303",
+            "Value": {
+                "id": "7733a408-de0a-4e86-b4ab-05299e219e7e",
+                "resourcePath": "objects\\obj_button_fullscreen\\obj_button_fullscreen.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1083,6 +1091,14 @@
             "Value": {
                 "id": "1ba0d8a2-210c-4e60-8fd6-f4a74b341f56",
                 "resourcePath": "sprites\\spr_hand\\spr_hand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f5dc8394-0ba7-4a57-803c-0c7d5727e61d",
+            "Value": {
+                "id": "995e5f20-dae9-46cd-bca8-2974a09e9592",
+                "resourcePath": "sprites\\spr_button_fullscreen\\spr_button_fullscreen.yy",
                 "resourceType": "GMSprite"
             }
         },
