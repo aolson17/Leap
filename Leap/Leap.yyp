@@ -631,6 +631,14 @@
             }
         },
         {
+            "Key": "a361474e-91c1-403d-869b-9a6bbd3a8d3b",
+            "Value": {
+                "id": "b74383cd-afe1-43c8-ae9f-f9fbf0b473b1",
+                "resourcePath": "sprites\\spr_moveable\\spr_moveable.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a42a2660-6542-49ca-a669-fd2ef522b302",
             "Value": {
                 "id": "03d1e721-f1c2-4772-89ce-b0a4adab4a35",
