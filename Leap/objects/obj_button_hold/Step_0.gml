@@ -5,6 +5,19 @@
 
 if ((distance_to_object(obj_player) <= 1 && obj_player.y < y-6)||(distance_to_object(obj_tail) <= 1 && obj_tail.y < y-12)) && image_index = 0{
 	image_index = 1
+	
+	not_filled = ds_list_create()
+	
+	with (obj_blue_block){
+		ds_list_add(other.not_filled,id)
+	}
+	with (obj_blue_block_lslope){
+		ds_list_add(other.not_filled,id)
+	}
+	with (obj_blue_block_rslope){
+		ds_list_add(other.not_filled,id)
+	}
+	
 	filled = ds_list_create()
 	
 	with (obj_blue_block_filled){
@@ -19,18 +32,6 @@ if ((distance_to_object(obj_player) <= 1 && obj_player.y < y-6)||(distance_to_ob
 	
 	for (var i = 0; i < ds_list_size(filled);i++){
 		instance_destroy(ds_list_find_value(filled,i))
-	}
-	
-	not_filled = ds_list_create()
-	
-	with (obj_blue_block_filled){
-		ds_list_add(other.not_filled,id)
-	}
-	with (obj_blue_block_lslope_filled){
-		ds_list_add(other.not_filled,id)
-	}
-	with (obj_blue_block_rslope_filled){
-		ds_list_add(other.not_filled,id)
 	}
 	
 	ds_list_destroy(filled)
