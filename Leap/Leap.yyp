@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "0ba044ad-99df-47a4-8950-114fb63a8fef",
+            "Value": {
+                "id": "9fa1e77e-abf5-4ff4-93a9-4155c58db148",
+                "resourcePath": "sprites\\spr_switchblock_blue\\spr_switchblock_blue.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0d257710-1ee3-4787-9299-98ee40fe2c9b",
             "Value": {
                 "id": "3cc77cbf-8c6e-4ea1-b7e4-2ab81ceb3d73",
@@ -412,6 +420,14 @@
                 "id": "d36c8c51-09f2-4be7-b8fa-ba4103aa1d48",
                 "resourcePath": "views\\854cf4ce-3b0b-4ffe-ab6f-13501bca93dc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "861f6e48-a25c-42b5-848d-ad9d526ce1c0",
+            "Value": {
+                "id": "74d94562-1339-44ae-8b2c-12e0fbb860c6",
+                "resourcePath": "sprites\\spr_switchblock_red\\spr_switchblock_red.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
