@@ -36,6 +36,10 @@ if tail && state != prepare{
 
 if state = stand || state = run{
 	eye_index = 1
+	
+	if !collision_point(x+face*8,y+10,par_solid,true,true){
+		eye_index = 0
+	}
 }else if state = fall{
 	eye_index = 0
 }

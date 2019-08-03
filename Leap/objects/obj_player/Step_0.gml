@@ -3,11 +3,16 @@ move = obj_control.right_key - obj_control.left_key
 
 if state = prepare{
 	tail_index = 0
-	if obj_control.jump_key_released{
-		ysp += -jump_speed
-		jumping = true
+	if !obj_control.jump_key{
+		y--
+		if eye_index = 5{
+			ysp = -jump_speed
+		}else{
+			ysp = -jump_speed*.6
+		}
 		state = jump
 		tail = false
+		eye_index = 6
 		instance_create_layer(x,y,"tail",obj_tail)
 	}
 }else{
@@ -75,14 +80,6 @@ if !place_meeting(x,y+1,par_solid) && state != ladder{ // Apply gravity
 			face = move
 		}
 	}
-}
-
-if ysp > 0{
-	jumping = false
-}
-if keyboard_check_released(vk_space) && jumping{ // Variable jumping
-	ysp *= variable_jump_factor
-	jumping = false
 }
 
 script_execute(state) // Manage which state is active

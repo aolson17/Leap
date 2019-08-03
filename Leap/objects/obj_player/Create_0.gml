@@ -8,7 +8,6 @@ max_run_speed = 2.5
 air_move_factor = .6
 
 jump_speed = 8
-variable_jump_factor = .5
 
 move_friction = .4
 
