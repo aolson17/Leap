@@ -12,7 +12,6 @@ if state = prepare{
 		}
 		state = jump
 		tail = false
-		eye_index = 6
 		instance_create_layer(x,y,"tail",obj_tail)
 	}
 }else{
@@ -20,7 +19,7 @@ if state = prepare{
 }
 eye_index += blink_speed
 
-if place_meeting(x,y+1,par_solid){
+if place_meeting(x,y+1,par_solid) || state = die{
 	if state = die || state = prepare{
 		move = 0
 		move_speed = 0
@@ -48,7 +47,12 @@ if move = sign(xsp){ // If trying to move in the same direction as momentum
 }
 
 if !place_meeting(x,y+1,par_solid) && state != ladder{ // Apply gravity
-	ysp += grav_speed
+	if state != die || ysp < 0{
+		ysp += grav_speed
+	}else if state = die{
+		ysp = 0
+		xsp = 0
+	}
 }else{ // If on ground or ladder
 	
 	if state = ladder{

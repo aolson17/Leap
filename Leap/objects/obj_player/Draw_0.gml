@@ -16,17 +16,6 @@ if state = prepare{
 	draw_sprite_ext(spr_eyes,eye_index,x,y+y_offset,face,1,0,c_white,image_alpha)
 }
 
-if floor(image_index) = 0{
-	image_speed = 0
-	image_index = 0
-		
-	if irandom(300)=1{ // Blick Randomly
-		image_index = 1
-	}
-}else{
-	image_speed = .5
-}
-
 if tail && state != prepare{
 	x_offset = 5 * -face
 	y_offset = 1
