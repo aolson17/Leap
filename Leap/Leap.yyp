@@ -863,11 +863,27 @@
             }
         },
         {
+            "Key": "b8e062b0-ea74-4bb5-b48e-fa2eb4e8ff07",
+            "Value": {
+                "id": "3558c7d7-8e60-4d25-a6f3-5d814b8fd9b5",
+                "resourcePath": "sounds\\msc_win\\msc_win.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "ba2436cb-f408-4b0b-976a-fd59d063a732",
             "Value": {
                 "id": "e53e1f39-b61e-4531-b367-f90f26f79495",
                 "resourcePath": "sprites\\spr_flash\\spr_flash.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ba2c8d88-a272-4bd9-b8c1-dd03e044b73f",
+            "Value": {
+                "id": "5a77a146-373d-4778-9a8e-7578a07e4545",
+                "resourcePath": "sounds\\msc_menu\\msc_menu.yy",
+                "resourceType": "GMSound"
             }
         },
         {
