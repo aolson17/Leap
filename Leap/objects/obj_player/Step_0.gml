@@ -70,7 +70,7 @@ if !place_meeting(x,y+1,par_solid) && !place_meeting(x,y,obj_ladder){ // Apply g
 		}
 		if !place_meeting(x,y-5,obj_ladder){
 			y-=5
-			ysp = -5
+			ysp = -3
 		}
 	}
 	
