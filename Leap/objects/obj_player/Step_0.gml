@@ -62,7 +62,7 @@ if !place_meeting(x,y+1,par_solid) && !place_meeting(x,y,obj_ladder){ // Apply g
 	}
 }else{ // If on ground or ladder
 	if place_meeting(x,y,obj_ladder){
-		ysp = -1.5
+		ysp = -.6
 		if xsp = 0{
 			state = stand
 		}else{

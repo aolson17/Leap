@@ -1,2 +1,2 @@
-image_speed = .4
+image_speed = 4
 mask_index = spr_ladder_bottom

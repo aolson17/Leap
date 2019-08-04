@@ -17,7 +17,7 @@ if !place_meeting(x,y+1,par_solid){ // Apply gravity
 }
 
 if place_meeting(x,y,obj_ladder){
-	ysp = -1.5
+	ysp = -1
 	xsp *= .8
 	if !place_meeting(x,y-5,obj_ladder){
 		y-=5
