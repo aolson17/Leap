@@ -53,7 +53,7 @@ if move = sign(xsp){ // If trying to move in the same direction as momentum
 	xsp += move * move_speed
 }
 
-if !place_meeting(x,y+1,par_solid) && state != ladder{ // Apply gravity
+if !place_meeting(x,y+1,par_solid) && !place_meeting(x,y,obj_ladder){ // Apply gravity
 	if state != die || ysp < 0{
 		ysp += grav_speed
 	}else if state = die{
@@ -61,16 +61,24 @@ if !place_meeting(x,y+1,par_solid) && state != ladder{ // Apply gravity
 		xsp = 0
 	}
 }else{ // If on ground or ladder
+	if place_meeting(x,y,obj_ladder){
+		ysp = -1.5
+		if xsp = 0{
+			state = stand
+		}else{
+			state = run
+		}
+		if !place_meeting(x,y-5,obj_ladder){
+			y-=5
+			ysp = -5
+		}
+	}
 	
-	if state = ladder{
-		ysp = -1
-	}else{
-		if (move != sign(xsp) || abs(xsp) > max_move_speed){ // Apply friction
-			if abs(xsp) - move_friction > 0{
-				xsp -= sign(xsp)*move_friction
-			}else{
-				xsp = 0
-			}
+	if (move != sign(xsp) || abs(xsp) > max_move_speed){ // Apply friction
+		if abs(xsp) - move_friction > 0{
+			xsp -= sign(xsp)*move_friction
+		}else{
+			xsp = 0
 		}
 	}
 	

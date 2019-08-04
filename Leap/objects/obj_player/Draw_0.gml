@@ -63,3 +63,7 @@ if state = stand || state = run || state = stand_grab{
 }else if state = fall{
 	eye_index = 0
 }
+
+if place_meeting(x,y,obj_ladder){
+	eye_index = 2
+}
