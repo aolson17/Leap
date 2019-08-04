@@ -7,7 +7,7 @@ grav_speed = .3
 run_speed = .2
 max_run_speed = 2.5
 
-air_move_factor = .6
+air_move_factor = .7
 
 jump_speed = 8
 
