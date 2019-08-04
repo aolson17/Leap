@@ -1,6 +1,8 @@
 
 tail = true
 
+grabbed = false
+
 grav_speed = .3
 run_speed = .2
 max_run_speed = 2.5

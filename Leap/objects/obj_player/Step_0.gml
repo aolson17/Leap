@@ -1,6 +1,13 @@
 
 move = obj_control.right_key - obj_control.left_key
 
+if distance_to_object(obj_spike) <= 1{
+	ysp = -5
+	xsp *= .2
+
+	state = die
+}
+
 if state = prepare{
 	tail_index = 0
 	if !obj_control.jump_key{

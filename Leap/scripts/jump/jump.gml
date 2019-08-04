@@ -8,6 +8,8 @@ if prev_state != state{
 }
 prev_state = state
 
+grabbed = false
+
 eye_index = clamp(eye_index,6,7)
 
 if !place_meeting(x,y+1,par_solid){ // If in air

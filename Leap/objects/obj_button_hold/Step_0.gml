@@ -3,7 +3,7 @@
 
 
 
-if ((distance_to_object(obj_player) <= 1 && obj_player.y < y-6)||(distance_to_object(obj_tail) <= 1 && obj_tail.y < y-12)) && image_index = 0{
+if ((distance_to_object(obj_player) <= 1 && obj_player.y < y-6)||(distance_to_object(obj_tail) <= 1 && obj_tail.y < y-12)||(distance_to_object(obj_block) <= 1 && obj_block.y < y-8)) && image_index = 0{
 	image_index = 1
 	
 	not_filled = ds_list_create()
@@ -44,7 +44,7 @@ if ((distance_to_object(obj_player) <= 1 && obj_player.y < y-6)||(distance_to_ob
 }
 
 
-if !((distance_to_object(obj_player) <= 1 && obj_player.y < y-6)||(distance_to_object(obj_tail) <= 1 && obj_tail.y < y-12)) && image_index = 1{
+if !((distance_to_object(obj_player) <= 1 && obj_player.y < y-6)||(distance_to_object(obj_tail) <= 1 && obj_tail.y < y-12)||(distance_to_object(obj_block) <= 1 && obj_block.y < y-8)) && image_index = 1{
 	image_index = 0
 	filled = ds_list_create()
 	ds_list_clear(filled)
