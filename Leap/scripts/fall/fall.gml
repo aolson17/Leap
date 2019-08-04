@@ -16,16 +16,28 @@ if !place_meeting(x,y+1,par_solid){ // If in air
 	
 	if ysp <= 0{
 		state = jump
+	}else{
+		if ysp > 2.5{
+			if instance_place(x,y+ysp,par_solid){
+				squish = true
+				alarm[0] = squish_frames
+				var sound = audio_play_sound(snd_land,0,0)
+				audio_sound_gain(sound,global.master_volume*global.sound_volume*.8,0)
+			}
+		}
 	}
 }else{ // If on ground
 	//var sound = audio_play_sound(snd_land,0,0)
 	//audio_sound_gain(sound,global.master_volume*global.sound_volume,0)
-	
+	/*
 	//if ysp < 1{
 		squish = true
 		alarm[0] = squish_frames
 	//}
 	
+	var sound = audio_play_sound(snd_land,0,0)
+	audio_sound_gain(sound,global.master_volume*global.sound_volume*.8,0)
+	*/
 	if xsp = 0{
 		state = stand
 	}else {

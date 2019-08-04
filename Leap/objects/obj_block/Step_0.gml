@@ -9,8 +9,8 @@ if !place_meeting(x,y+1,par_solid){ // Apply gravity
 		last_direction = sign(xsp)
 	}
 	if falling { // If previously falling
-		//var sound = audio_play_sound(snd_box_fall,0,0)
-		//audio_sound_gain(sound,global.master_volume*global.sound_volume,0)
+		var sound = audio_play_sound(snd_land,0,0)
+		audio_sound_gain(sound,global.master_volume*global.sound_volume,0)
 	}
 	falling = false
 	xsp *= .9

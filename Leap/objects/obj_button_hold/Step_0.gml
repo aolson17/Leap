@@ -5,6 +5,8 @@
 
 if ((distance_to_object(obj_player) <= 1 && obj_player.y < y-6)||(distance_to_object(obj_tail) <= 1 && obj_tail.y < y-12)||(distance_to_object(obj_block) <= 1 && obj_block.y < y-8)) && image_index = 0{
 	image_index = 1
+	var sound = audio_play_sound(snd_button,0,0)
+	audio_sound_gain(sound,global.master_volume*global.sound_volume*.8,0)
 	
 	not_filled = ds_list_create()
 	
@@ -46,6 +48,8 @@ if ((distance_to_object(obj_player) <= 1 && obj_player.y < y-6)||(distance_to_ob
 
 if !((distance_to_object(obj_player) <= 1 && obj_player.y < y-6)||(distance_to_object(obj_tail) <= 1 && obj_tail.y < y-12)||(distance_to_object(obj_block) <= 1 && obj_block.y < y-8)) && image_index = 1{
 	image_index = 0
+	var sound = audio_play_sound(snd_button,0,0)
+	audio_sound_gain(sound,global.master_volume*global.sound_volume*.8,0)
 	filled = ds_list_create()
 	ds_list_clear(filled)
 	

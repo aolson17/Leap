@@ -22,6 +22,17 @@ if instance_number(obj_block) > 0{
 }
 
 if state = prepare{
+	
+	if round(eye_index) = 5 && round(eye_index) != prev_image_index{
+		var sound = audio_play_sound(snd_charge_3,0,0)
+		audio_sound_gain(sound,global.master_volume*global.sound_volume*.8,0)
+	}
+	prev_image_index = round(eye_index)
+	
+	
+	
+	
+	
 	draw_sprite_ext(spr_tail_jump,tail_index,x,y-6,face,1,0,c_white,image_alpha)
 	
 	draw_sprite_ext(spr_body_squish,0,x,y-5,face,1,0,c_white,image_alpha)

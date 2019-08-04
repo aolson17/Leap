@@ -1,6 +1,1 @@
-
-
-pressed = false
-
-
-
+alarm[0] = 1

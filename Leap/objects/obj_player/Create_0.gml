@@ -36,6 +36,7 @@ face = 1
 state = stand
 
 prev_state = state
+prev_image_index = image_index
 
 x_offset = 0 // Where to draw what's being held
 y_offset = -25

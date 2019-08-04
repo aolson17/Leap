@@ -4,7 +4,12 @@ move = obj_control.right_key - obj_control.left_key
 if distance_to_object(obj_spike) <= 1{
 	ysp = -5
 	xsp *= .2
-
+	
+	if state != die{
+		var sound = audio_play_sound(snd_swell,0,0)
+		audio_sound_gain(sound,global.master_volume*global.sound_volume*.8,0)
+	}
+	
 	state = die
 }
 
@@ -17,6 +22,8 @@ if state = prepare{
 		}else{
 			ysp = -jump_speed*.6
 		}
+		var sound = audio_play_sound(snd_jump,0,0)
+		audio_sound_gain(sound,global.master_volume*global.sound_volume,0)
 		state = jump
 		tail = false
 		instance_create_layer(x,y,"tail",obj_tail)
@@ -71,6 +78,8 @@ if !place_meeting(x,y+1,par_solid) && !place_meeting(x,y,obj_ladder){ // Apply g
 		if !place_meeting(x,y-5,obj_ladder){
 			y-=5
 			ysp = -3
+			var sound = audio_play_sound(snd_charge_3,0,0)
+			audio_sound_gain(sound,global.master_volume*global.sound_volume*.6,0)
 		}
 	}
 	
@@ -90,8 +99,8 @@ if !place_meeting(x,y+1,par_solid) && !place_meeting(x,y,obj_ladder){ // Apply g
 			//state = jump
 			tail_index = 0
 			state = prepare
-			//var sound = audio_play_sound(snd_jump,0,0)
-			//audio_sound_gain(sound,global.master_volume*global.sound_volume,0)
+			var sound = audio_play_sound(snd_charge_1,0,0)
+			audio_sound_gain(sound,global.master_volume*global.sound_volume*.5,0)
 		}
 	} 
 	if state != die{
