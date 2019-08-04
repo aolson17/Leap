@@ -286,7 +286,7 @@
             "visible": true,
             "vspeed": 0,
             "vtiled": true,
-            "x": 0,
+            "x": 20,
             "y": 0
         },
         {
