@@ -47,8 +47,8 @@ if tail && state != prepare && grabbed = false{
 	y_offset = 1
 	
 	draw_sprite_ext(spr_tail_move,tail_index,x+x_offset,y+y_offset,face,1,0,c_white,image_alpha)
-}else{
-	x_offset = 11 * -face
+}else if tail && state != prepare && grabbed != false{
+	x_offset = 13 * -face
 	y_offset = 1
 	
 	draw_sprite_ext(spr_tail_pull,tail_index,x+x_offset,y+y_offset,face,1,0,c_white,image_alpha)
