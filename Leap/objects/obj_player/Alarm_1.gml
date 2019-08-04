@@ -1,6 +1,7 @@
 /// @description Explode
 
 instance_destroy()
+instance_create_layer(x,y,"Instances",obj_flash)
 instance_create_layer(x,y,"Tail",obj_part_1)
 instance_create_layer(x,y,"Tail",obj_part_2)
 instance_create_layer(x,y,"Tail",obj_part_3)
