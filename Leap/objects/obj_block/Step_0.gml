@@ -5,6 +5,13 @@ if !place_meeting(x,y+1,par_solid){ // Apply gravity
 	}
 	falling = true
 }else{ // Apply Friction
+	
+	var block = instance_place(x,y-1,obj_block)
+	
+	if block != noone{
+		block.xsp = xsp
+	}
+	
 	if xsp != 0{
 		last_direction = sign(xsp)
 	}
